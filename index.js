@@ -24,33 +24,25 @@ app.use(morgan('dev'))
 app.get('/', function (req, res) {  
   res.sendFile(path.join(__dirname + '/index.html'))
 })
-app.post('/upload', async (req, res) => {
+app.post('/upload', async (req, res) => {    
     try {
         if(!req.files) {
             res.send({
                 status: false,
                 message: 'No file uploaded'
-            });
-        } else {
-            //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
-            let avatar = req.files.avatar
-            
-            //Use the mv() method to place the file in upload directory (i.e. "uploads")
-            avatar.mv(__dirname +'/uploads/' + avatar.name,function(err) {
-             if(err){
-                    console.log(err);
-                }
             })
-            //console.log( avatar)
+        } else {            
+            let uploadfile = req.files            
+            
+            Object.keys(uploadfile).forEach(key => {                      
+                const dst = __dirname + '/uploads/' + uploadfile[key].name                  
+                uploadfile[key].mv(dst,err =>console.log(err))
+                })
+            
             //send response
             res.send({
                 status: true,
-                message: 'File is uploaded',
-                data: {
-                    name: avatar.name,
-                    mimetype: avatar.mimetype,
-                    size: avatar.size
-                }
+                message: 'Files is uploaded'                
             })
         }
     } catch (err) {

@@ -52,46 +52,29 @@ import EssentialLink from 'components/EssentialLink.vue'
 const linksData = [
   {
     title: 'Upload',
-    caption: 'Upload demo',
-    icon: 'school',
+    caption: 'Upload files demo',
+    icon: 'cloud_upload',
     link: '/upload'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
+    title: 'Users',
+    caption: 'List of users',
+    icon: 'people',
+    link: '/users'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    title: 'For director',
+    caption: 'Context for director role',
+    icon: '',
+    link: '/director'
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    title: 'For manager',
+    caption: 'Context for manager role',
+    icon: '',
+    link: '/manager'
   }
+
 ]
 
 export default {

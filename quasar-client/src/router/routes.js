@@ -14,7 +14,20 @@ const routes = [
       { path: '', component: () => import('pages/upload.vue') }
     ]
   },
-
+  {
+    path: '/director',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/director.vue') }
+    ]
+  },
+  {
+    path: '/manager',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/manager.vue') }
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {
