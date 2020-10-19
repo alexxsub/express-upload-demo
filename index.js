@@ -1,17 +1,18 @@
-const express = require('express'),
-      fileUpload = require('express-fileupload'),
-      cors = require('cors'),
-      bodyParser = require('body-parser'),
-      morgan = require('morgan'),
-      _ = require('lodash'),
-      path = require('path'),
-      rfs = require('rotating-file-stream')
-     
-      
-    require('dotenv').config({ path: '.env' })
-const port = process.env.PORT || 8080,
-      app = express()
 
+import fileUpload from 'express-fileupload'
+import cors from 'cors'
+import bodyParser from 'body-parser'
+import morgan from 'morgan'
+import _  from 'lodash'
+import path from 'path'
+import rfs from 'rotating-file-stream'
+import  express  from 'express' 
+import dotenv from 'dotenv'
+    dotenv.config({ path: '.env' })
+const port = process.env.PORT || 8080,
+    app = express(),
+    __dirname = process.env.PWD
+    
 // enable files upload
 app.use(fileUpload({
     createParentPath: true
