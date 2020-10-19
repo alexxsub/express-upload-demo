@@ -1,1 +1,2 @@
 POST {"avatar":{"name":"cloud-03.png","size":847895,"encoding":"7bit","tempFilePath":"","truncated":false,"mimetype":"image/png","md5":"ec72abf458962a90ff7e4e7c4e2c76c6"}} /upload 200 45 - 1.495 ms
+POST {"avatar":{"name":"cloud-04.png","size":181213,"encoding":"7bit","tempFilePath":"","truncated":false,"mimetype":"image/png","md5":"6c8346227b2806d4513a10565a5266b7"}} /upload 200 45 - 8.096 ms
