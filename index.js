@@ -1,16 +1,14 @@
-const express = require('express'),
+const app = require('express')(),
       fileUpload = require('express-fileupload'),
       cors = require('cors'),
       bodyParser = require('body-parser'),
       morgan = require('morgan'),
-      _ = require('lodash'),
       path = require('path'),
       rfs = require('rotating-file-stream')
      
       
     require('dotenv').config({ path: '.env' })
-const port = process.env.PORT || 8080,
-      app = express()
+const port = process.env.PORT || 8080
 
 // enable files upload
 app.use(fileUpload({
